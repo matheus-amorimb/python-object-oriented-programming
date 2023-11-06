@@ -1,7 +1,7 @@
 ﻿# Object Oriented Programming
 
 ## Descrição
-Esse repositório possui como objetivo armazenar os projetos realizados durante o meu aprofundamento em Python no tópico 'Programação Orientada a Objetos'.
+Esse repositório possui como objetivo armazenar os projetos realizados durante o meu aprofundamento no tópico 'Programação Orientada a Objetos' em Python.
 
 - [Projeto 1](#projeto-1)
 - [Projeto 2]()
