@@ -1,12 +1,16 @@
 import unittest
+
 from src.BankAccount import BankAccount
+
 
 class TestBankAccount(unittest.TestCase):
     def setUp(self):
         self.account_number = '180698'
         self.first_name = 'FIRST'
         self.last_name = 'LAST'
-        self.account = BankAccount(self.account_number, self.first_name, self.last_name)
+        self.account = BankAccount(
+            self.account_number, self.first_name, self.last_name
+        )
 
     def test_initial_balance(self):
         self.assertEqual(self.account.balance, 0.0)
@@ -37,11 +41,16 @@ class TestBankAccount(unittest.TestCase):
     def test_withdraw_negative_value(self):
         with self.assertRaises(ValueError):
             self.account.withdraw(-50)
-    
+
     def test_withdraw_more_than_balance(self):
         with self.assertRaises(ValueError):
             self.initial_balance = 100
-            BankAccount(self.account_number, self.first_name, self.last_name, self.initial_balance)
+            BankAccount(
+                self.account_number,
+                self.first_name,
+                self.last_name,
+                self.initial_balance,
+            )
             self.account.withdraw(200)
 
     def test_create_account_blank_first_name(self):
@@ -62,5 +71,6 @@ class TestBankAccount(unittest.TestCase):
     def tearDown(self):
         pass
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     pass
